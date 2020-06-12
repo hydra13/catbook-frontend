@@ -7,6 +7,7 @@ import {
 import Profile from './pages/profile';
 import Login from './pages/login';
 import Home from './pages/home';
+import Settings from './pages/settings';
 import Header from './components/header';
 // import Footer from './components/footer';
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <section class="section">
+      <section class="section is-white">
         <div class="container">
           <Switch>
             <Route path="/profile">
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/settings">
+              <Settings />
             </Route>
             <Route path="/">
               <Home />

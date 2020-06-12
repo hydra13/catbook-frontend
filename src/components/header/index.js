@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
     return (
         <>
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-light" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link className="navbar-item is-size-3" to="/"><b>CatBook</b></Link>
                     {/* <Link className="navbar-item is-size-3" to="/">
@@ -22,6 +22,7 @@ export default function Header() {
                     <div className="navbar-start">
                         <Link className="navbar-item" to="/">Home</Link>
                         <Link className="navbar-item" to="/profile">Profile</Link>
+                        <Link className="navbar-item" to="/settings">Settings</Link>
                     </div>
 
                     <div className="navbar-end">
