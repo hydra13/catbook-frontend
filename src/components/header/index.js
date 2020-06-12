@@ -28,8 +28,8 @@ export default function Header() {
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
-                                {/* <Link className="button is-success" to="/signup">Sign up</Link> */}
-                                <Link className="button is-success" to="/login">Log in</Link>
+                                <Link className="button is-success" to="/signup">Sign up</Link>
+                                <Link className="button is-success is-light" to="/login">Log in</Link>
                             </div>
                         </div>
                     </div>

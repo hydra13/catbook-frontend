@@ -10,7 +10,16 @@ export default function Home() {
             <h2 className="subtitle">
                 Social network for cats
             </h2>
-            <Link className="button is-success" to="/login">Log in</Link>
+
+            <div className="field is-grouped is-grouped-centered">
+                <p class="control">
+                    <Link className="button is-success" to="/signup">Sign up</Link>
+                </p>
+                <p class="control">
+                    <Link className="button is-success is-light" to="/login">Log in</Link>
+                </p>
+            </div>
+
         </div>
     )
 }

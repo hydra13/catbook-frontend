@@ -8,6 +8,7 @@ import Profile from './pages/profile';
 import Login from './pages/login';
 import Home from './pages/home';
 import Settings from './pages/settings';
+import SighUp from './pages/signup';
 import Header from './components/header';
 // import Footer from './components/footer';
 
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/settings">
               <Settings />
+            </Route>
+            <Route path="/signup">
+              <SighUp />
             </Route>
             <Route path="/">
               <Home />
