@@ -12,10 +12,10 @@ export default function Home() {
             </h2>
 
             <div className="field is-grouped is-grouped-centered">
-                <p class="control">
+                <p className="control">
                     <Link className="button is-success" to="/signup">Sign up</Link>
                 </p>
-                <p class="control">
+                <p className="control">
                     <Link className="button is-success is-light" to="/login">Log in</Link>
                 </p>
             </div>

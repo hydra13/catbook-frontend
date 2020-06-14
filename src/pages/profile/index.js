@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
-export default function Profile() {
+function Profile(props) {
+    if (!props.user) {
+        return (<Redirect to="/login" />)
+    }
+    const { name } = props.user;
     return (
         <div className="tile is-ancestor">
             <div className="tile is-parent is-vertical">
@@ -11,7 +17,7 @@ export default function Profile() {
                                 <img src={process.env.PUBLIC_URL + '/logo2.png'} alt="Avatar" />
                             </figure>
                         </div>
-                        <p className="title">CatMurr</p>
+                        <p className="title">{name}</p>
                         <p className="subtitle">Status of this cat</p>
                         <div className="content">
                             Date of last visit
@@ -44,7 +50,7 @@ export default function Profile() {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Phasellus nec iaculis mauris.
                                         <br />
-                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                        <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +73,7 @@ export default function Profile() {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Phasellus nec iaculis mauris.
                                         <br />
-                                        <time datetime="2016-1-1">11:32 PM - 1 Jan 2018</time>
+                                        <time dateTime="2016-1-1">11:32 PM - 1 Jan 2018</time>
                                     </div>
                                 </div>
                             </div>
@@ -75,48 +81,12 @@ export default function Profile() {
                     </article>
                 </div>
             </div>
-
-
-            {/* <div className="column h13-centered">
-                <figure className="image is-128x128 box">
-                    <img src={process.env.PUBLIC_URL + '/logo2.png'} alt="Avatar" />
-                </figure>
-            </div>
-
-            <form className="column">
-                <div className="field">
-                    <label className="label">Username</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input" type="text" placeholder="Login" value="" readOnly />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user"></i>
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">Name</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input" type="text" placeholder="Login" value="" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user"></i>
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">Username</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input" type="text" placeholder="Login" value="" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user"></i>
-                        </span>
-                    </div>
-                </div>
-                <div className="field is-grouped is-grouped-centered">
-                    <div className="control">
-                        <button className="button is-success">Save</button>
-                    </div>
-                </div>
-            </form> */}
         </div>
     )
 }
+
+function mapStateToProps(state) {
+    return { user: state.user.user }
+}
+
+export default connect(mapStateToProps)(Profile);

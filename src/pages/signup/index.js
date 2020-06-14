@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
     return (
-        <div class="columns is-centered">
+        <div className="columns is-centered">
             <form className="column is-half">
                 <div className="field">
                     <label className="label">Name</label>
@@ -43,10 +44,10 @@ export default function SignUp() {
 
                 <div className="field is-grouped is-grouped-centered">
                     <div className="control">
-                        <button className="button is-success">Submit</button>
+                        <Link className="button is-success is-light" to="/login">Login</Link>
                     </div>
                     <div className="control">
-                        <button className="button is-success is-light">Cancel</button>
+                        <button className="button is-success">Save</button>
                     </div>
                 </div>
             </form>
