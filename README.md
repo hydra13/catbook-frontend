@@ -1,9 +1,10 @@
-# CatBook FrontEnd
+# CatBook - FrontEnd
+[![Build Status](https://travis-ci.org/hydra13/catbook-frontend.svg?branch=master)](https://travis-ci.org/hydra13/catbook-frontend)
 [![Heroku](https://heroku-badge.herokuapp.com/?app=catbook-frontend)](https://catbook-frontend.herokuapp.com/)
 
 URL: **[catbook-frontend.herokuapp.com](https://catbook-frontend.herokuapp.com/)**
 
-CatBook like FaceBook, but for cats :)
+**CatBook like FaceBook, but for cats :)**
 
 This is a simple project for HighLoad course.
 
