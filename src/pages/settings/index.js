@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { setUser } from '../../actions/userActions';
+import { PROTOCOL, HOST, PORT } from '../../backend-config';
 
 function Settings(props) {
     const [name, setName] = useState(props.user ? props.user.name : '');
@@ -22,7 +23,7 @@ function Settings(props) {
                 password
             }
             console.log(`newUser: ${JSON.stringify(newUser)}`)
-            const result = (await axios.put(`http://localhost:7713/cats/${props.user.id}`, newUser)).data;
+            const result = (await axios.put(`${PROTOCOL}://${HOST}:${PORT}/cats/${props.user.id}`, newUser)).data;
             if (result.error) {
                 console.log(result.message);
                 return;
