@@ -1,6 +1,8 @@
 # CatBook FrontEnd
 [![Heroku](https://heroku-badge.herokuapp.com/?app=catbook-frontend)](https://catbook-frontend.herokuapp.com/)
 
+URL: **[catbook-frontend.herokuapp.com](https://catbook-frontend.herokuapp.com/)**
+
 CatBook like FaceBook, but for cats :)
 
 This is a simple project for HighLoad course.
