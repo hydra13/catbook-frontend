@@ -4,16 +4,17 @@ import axios from 'axios';
 // import md5 from 'md5';
 import { setUser } from '../../actions/userActions'
 import { connect } from 'react-redux';
+import { PROTOCOL, HOST, PORT } from '../../backend-config';
 
 function Login(props) {
     const [username, setUsername] = useState("cat1");
-    const [password, setPassword] = useState("qwe123");
+    const [password, setPassword] = useState("cat1");
     const [validPassword, setValidationPassword] = useState(true);
     const [validUsername, setValidationUsername] = useState(true);
     const history = useHistory();
 
     function isValidPassword() {
-        if (password.length >= 6) {
+        if (password.length >= 3) {
             setValidationPassword(true);
             return true;
         }
@@ -34,7 +35,7 @@ function Login(props) {
         event.preventDefault();
 
         if (isValidUsername() & isValidPassword()) {
-            const result = (await axios.get('http://localhost:7713/cats/')).data;
+            const result = (await axios.get(`${PROTOCOL}://${HOST}:${PORT}/cats/`)).data;
             if (result.error) {
                 throw new Error(result.message);
             }
