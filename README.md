@@ -1,3 +1,10 @@
+# CatBook FrontEnd
+[![Heroku](https://heroku-badge.herokuapp.com/?app=catbook-frontend)](https://catbook-frontend.herokuapp.com/)
+
+CatBook like FaceBook, but for cats :)
+
+This is a simple project for HighLoad course.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
