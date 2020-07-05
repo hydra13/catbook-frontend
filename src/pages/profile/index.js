@@ -26,7 +26,7 @@ function Profile(props) {
                 </article>
                 <div className="tile is-child"></div>
             </div>
-            <div className="tile is-vertical is-10">
+            <div className="tile is-vertical is-9">
                 <div className="tile is-parent">
                     <article className="tile is-child notification is-light">
                         <p className="title">News</p>
