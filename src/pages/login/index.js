@@ -6,7 +6,7 @@ import { setUser } from '../../actions/userActions'
 import { connect } from 'react-redux';
 import { PROTOCOL, HOST, PORT } from '../../backend-config';
 
-function Login(props) {
+export function Login(props) {
     const [username, setUsername] = useState("cat1");
     const [password, setPassword] = useState("cat1");
     const [validPassword, setValidationPassword] = useState(true);
