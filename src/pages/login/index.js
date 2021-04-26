@@ -62,7 +62,7 @@ export function Login(props) {
                             <i className="fas fa-user"></i>
                         </span>
                     </div>
-                    {!validUsername ? <p class="help is-danger">This username is invalid</p> : <span></span>}
+                    {!validUsername && <p class="help is-danger">This username is invalid</p>}
                 </div>
 
                 <div className="field">
@@ -73,7 +73,7 @@ export function Login(props) {
                             <i className="fas fa-lock"></i>
                         </span>
                     </p>
-                    {!validPassword ? <p class="help is-danger">This password is invalid</p> : <span></span>}
+                    {!validPassword && <p class="help is-danger">This password is invalid</p>}
                 </div>
 
                 <div className="field is-grouped is-grouped-centered">
